@@ -1,8 +1,21 @@
 
 .header__option {
+    display: inline-block;
+    padding: 6pt;
     font-size: 16pt;
     font-weight: 600;
-    opacity: 0.733;
+    opacity: 0.88;
     text-shadow: -6pt 6pt 0pt rgba(0, 0, 0, 0.16);
     user-select: none;
+    cursor: pointer;
+    transition:
+        transform 0.22s ease,
+        color 0.22s ease,
+        text-shadow 0.22s ease;
+}
+
+.header__option:hover {
+    transform: scale(1.22);
+    color: rgba(200, 200, 200, 0.933);
+    text-shadow: -4pt 4pt 2pt rgba(0, 0, 0, 0.06);
 }
