@@ -11,4 +11,9 @@
     animation-name: centeredScaleWobble;
     animation-duration: 0.66s;
     animation-timing-function: ease;
+    transition: transform 0.33s ease;
+}
+
+.circle--hover {
+    transform: translate(-50%, -50%) scale(1.33);
 }

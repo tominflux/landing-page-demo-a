@@ -2,7 +2,15 @@ import React from 'react'
 import './styles.css'
 
 const Circle = (props) => {
-    //
+    //State
+    const [isHovering, setHovering] = React.useState(false)
+    //Effects
+    // - Observe Mouse Position
+
+    //Constants
+    const className = (
+        `circle${isHovering ? " circle--hovering" : ""}`
+    )
     const style = {
         left: `${props.x}vw`,
         top: `${props.y}vh`,
@@ -13,7 +21,7 @@ const Circle = (props) => {
     //Render
     return (
         <div 
-            className="circle"
+            className={className}
             style={style}
         />
     )

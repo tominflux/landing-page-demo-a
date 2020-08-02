@@ -8,12 +8,13 @@ const BgGfx = () => {
         const circles = []
         const cellSize = 100/23.33
         for (let x=0; x<=100; x+=cellSize) {
-            const animationDelay = 0.33 + 0.66 * x / 100
+            const animationDelay = 0.0 + 0.66 * x / 100
             for (let y=0; y<=100; y+=cellSize) {
                 const r = (Math.exp(y / 10) / 100) / 6.66
                 if (r > 3.33) {
                     const circle = (
                         <Circle 
+                            key={`${x}-${y}`}
                             x={x}
                             y={y}
                             r={`${r}pt`}
