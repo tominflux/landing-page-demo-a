@@ -1,0 +1,17 @@
+
+
+.title {
+    display: inline-block;
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-33%, -50%);
+}
+
+.title__heading {
+    font-size: 72pt;
+    color: rgb(44, 44, 66);
+    animation-name: risingFadeIn;
+    animation-duration: 0.99s;
+    animation-timing-function: ease;
+}
