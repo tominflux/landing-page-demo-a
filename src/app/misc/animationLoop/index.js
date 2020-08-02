@@ -23,7 +23,7 @@ export function startLoop(onLoop, onLoopKey = onLoop) {
 export function endLoop(onLoop, onLoopKey = null) {
     const _key = onLoopKey || onLoop
     const loopHandle = loopHandleMap.get(_key)
-    if (loopHandle.id !== null) {
+    if (loopHandle && loopHandle.id !== null) {
         cancelAnimationFrame(loopHandle.id)
     }
     loopHandleMap.delete(onLoop)

@@ -4,4 +4,5 @@
     font-weight: 600;
     opacity: 0.733;
     text-shadow: -6pt 6pt 0pt rgba(0, 0, 0, 0.16);
+    user-select: none;
 }
