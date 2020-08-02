@@ -1,0 +1,14 @@
+
+
+
+.circle {
+    width: 64pt;
+    height: 64pt;
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(44, 44, 66);
+    transform: translate(-50%, -50%);
+    animation-name: centeredScaleWobble;
+    animation-duration: 0.66s;
+    animation-timing-function: ease;
+}
