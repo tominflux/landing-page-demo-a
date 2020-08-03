@@ -34,14 +34,15 @@ const Gfx = (props) => {
         rotateOnce(mainCircles)
         //
         const onHover = () => {
-            console.log("Hi")
             rotateAgain(mainCircles)
         }
         //
         canvas.current.addEventListener("mouseenter", onHover)
+        canvas.current.addEventListener("touchstart", onHover)
         //
         return () => {
             canvas.current.removeEventListener("mouseenter", onHover)
+            canvas.current.removeEventListener("touchstart", onHover)
             stopThreeAnimation(threeAni)
         }
     })
