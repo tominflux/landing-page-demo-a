@@ -1,0 +1,18 @@
+
+.title__point {
+    display: inline-block;
+    position: absolute;
+    width: 3pt;
+    height: 3pt;
+    background-color: rgb(44, 44, 66);
+    transform: scale(0.0);
+    opacity: 0.0;
+    transition: 
+        transform 0.33s ease,
+        opacity 0.88s ease;
+}
+
+.title__point--hover {
+    transform: scale(1.0);
+    opacity: 1.0;
+}

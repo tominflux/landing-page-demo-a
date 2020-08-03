@@ -1,5 +1,6 @@
 import React from 'react'
 import './styles.css'
+import TitleUnderline from './underline'
 
 
 const Title = (props) => {
@@ -9,6 +10,7 @@ const Title = (props) => {
             <h1 className="title__heading">
                 Something Inc.
             </h1>
+            <TitleUnderline />
         </div>
     )
 }
