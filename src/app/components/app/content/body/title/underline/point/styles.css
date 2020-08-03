@@ -2,8 +2,8 @@
 .title__point {
     display: inline-block;
     position: absolute;
-    width: 3pt;
-    height: 3pt;
+    width: 4pt;
+    height: 4pt;
     background-color: rgb(44, 44, 66);
     transform: scale(0.0);
     opacity: 0.0;

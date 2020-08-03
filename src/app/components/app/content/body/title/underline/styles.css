@@ -1,1 +1,8 @@
 
+
+
+@media (max-width: 767px) {
+    .title__underline {
+        display: none;
+    }
+}

@@ -3,3 +3,9 @@
 .header__logo {
     height: 64pt;
 }
+
+@media (max-width: 767px) {
+    .title__heading {
+        height: 52pt;
+    }
+}

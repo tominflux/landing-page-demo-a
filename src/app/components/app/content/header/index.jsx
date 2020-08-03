@@ -8,19 +8,23 @@ const Header = (props) => {
     return (
         <header className="header">
             <div className="row align-items-center">
-                <div className="col-md-2 text-center">
+                <div className="col-4 col-md-2 text-center">
                     <HeaderLogo />
                 </div>
                 <div className="offset-md-6"/>
-                <div className="col-md-2">
-                    <HeaderOption>
-                        About Us
-                    </HeaderOption>
-                </div>
-                <div className="col-md-2">
-                    <HeaderOption>
-                        Stay in the Loop
-                    </HeaderOption>
+                <div className="col-8 col-md-4">
+                    <div className="row align-items-center">
+                        <div className="col-6">
+                            <HeaderOption>
+                                About Us
+                            </HeaderOption>
+                        </div>
+                        <div className="col-6">
+                            <HeaderOption>
+                                Stay in the Loop
+                            </HeaderOption>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>

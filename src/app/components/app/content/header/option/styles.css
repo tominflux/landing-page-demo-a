@@ -19,3 +19,10 @@
     color: rgba(200, 200, 200, 0.933);
     text-shadow: -4pt 4pt 2pt rgba(0, 0, 0, 0.06);
 }
+
+@media (max-width: 767px) {
+    .header__option {
+        font-size: 15pt;
+        text-align: center;
+    }
+}

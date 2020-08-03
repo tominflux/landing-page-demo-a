@@ -17,3 +17,10 @@
 .circle--hover {
     transform: translate(-50%, -50%) scale(1.33);
 }
+
+
+@media (max-width: 767px) {
+    .circle {
+        margin-top: 28pt;
+    }
+}

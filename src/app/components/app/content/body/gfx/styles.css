@@ -11,3 +11,19 @@
     stroke: rgb(44, 44, 66);
     stroke-width: 11pt;
 }
+
+@media (max-width: 991px) {
+    .gfx {
+        width: 233pt;
+        height: 233pt;
+    }
+}
+
+@media (max-width: 767px) {
+    .gfx {
+        width: 180pt;
+        height: 180pt;
+        position: relative;
+        top: 22pt;
+    }
+}
