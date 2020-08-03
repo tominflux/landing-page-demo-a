@@ -9,9 +9,9 @@
     user-select: none;
     cursor: pointer;
     transition:
-        transform 0.22s ease,
+        transform 0.33s ease,
         color 0.22s ease,
-        text-shadow 0.22s ease;
+        text-shadow 0.33s ease;
 }
 
 .header__option:hover {

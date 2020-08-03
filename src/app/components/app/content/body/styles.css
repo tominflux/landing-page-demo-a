@@ -1,0 +1,8 @@
+
+.body {
+    width: 100%;
+    padding: 22pt;
+    position: absolute;
+    top: 44%;
+    transform: translateY(-50%);
+}
