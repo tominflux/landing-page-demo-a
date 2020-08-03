@@ -1,0 +1,13 @@
+
+
+.gfx {
+    display: inline-block;
+    width: 260pt;
+    height: 260pt;
+}
+
+.gfx__main-circle {
+    fill: none;
+    stroke: rgb(44, 44, 66);
+    stroke-width: 11pt;
+}

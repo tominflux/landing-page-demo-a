@@ -1,6 +1,7 @@
 import React from 'react'
 import Title from './title'
 import './styles.css'
+import Gfx from './gfx'
 
 const Body = (props) => {
     //
@@ -8,7 +9,7 @@ const Body = (props) => {
         <section className="body">
             <div className="row align-items-center">
                 <div className="col-md-5 text-center">
-                    Hi
+                    <Gfx />
                 </div>
                 <div className="col-md-7">
                     <Title />
