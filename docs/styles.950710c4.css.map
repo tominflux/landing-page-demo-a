@@ -1,1 +1,0 @@
-{"version":3,"sources":["styles.css"],"names":[],"mappings":"AACA,KACI,SAAU,CACV,QAAS,CACT,aAAc,CACd,wBAAoC,CACpC,uBACJ","file":"styles.950710c4.css","sourceRoot":"../src","sourcesContent":["\nbody {\n    padding: 0;\n    margin: 0;\n    line-height: 0;\n    background-color: rgb(244, 233, 255);\n    font-family: 'Pridi', serif;\n}"]}

@@ -22,7 +22,6 @@ const genOrbitCircle = () => {
 }
 
 export const genCircles = (canvasDimensions) => {
-    
     //Generate positions.
     const curve = new THREE.EllipseCurve(
         0,  0,            

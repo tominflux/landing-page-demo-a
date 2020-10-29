@@ -1,6 +1,6 @@
 import React from 'react'
-import './styles.css'
 import TitleUnderline from './underline'
+import './styles.css'
 
 
 const Title = (props) => {
