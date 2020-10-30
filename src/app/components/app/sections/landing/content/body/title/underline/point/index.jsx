@@ -1,6 +1,6 @@
 import React from 'react'
-import { getMousePosition } from '../../../../../../../misc/mouseTracker'
-import { startLoop, endLoop } from '../../../../../../../misc/animationLoop'
+import { endLoop, startLoop } from '../../../../../../../../../misc/animationLoop'
+import { getMousePosition } from '../../../../../../../../../misc/mouseTracker'
 import './styles.css'
 
 const HOVER_DISTANCE = 330

@@ -1,11 +1,8 @@
 import React from 'react'
-import BgGfx from './bgGfx'
-import Content from './content'
-
+import LandingSection from './sections/landing'
 
 const App = () => (<>
-    <BgGfx />
-    <Content />
+    <LandingSection />
 </>)
 
 export default App
