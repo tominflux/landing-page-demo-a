@@ -9,7 +9,7 @@ const CtaFooter = () => (
         "py-5",
         "cta-footer"
     )}>
-        <h3 className="text-center">
+        <h3 className="text-center py-4">
             What are you waiting for?
         </h3>
         <div>
@@ -19,7 +19,7 @@ const CtaFooter = () => (
                 className="cta-footer__img"
             />
         </div>
-        <h2 className="text-center">
+        <h2 className="text-center py-5">
             Start making your life easier!
         </h2>
     </section>
