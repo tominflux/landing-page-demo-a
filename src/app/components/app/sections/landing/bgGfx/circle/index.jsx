@@ -43,8 +43,8 @@ const Circle = (props) => {
         `circle${isHovering ? " circle--hover" : ""}`
     )
     const style = {
-        left: `${props.x}vw`,
-        top: `${props.y}vh`,
+        left: `${props.x}%`,
+        top: `${props.y}%`,
         width: props.r,
         height: props.r,
         animationDelay: props.animationDelay

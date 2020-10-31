@@ -1,8 +1,10 @@
 
 .bg-gfx {
     position: absolute;
+    left: 0;
+    top: 0;
     display: inline-block;
     width: 100%;
-    height: 100vh;
+    height: 105%;
     overflow: hidden;
 }
