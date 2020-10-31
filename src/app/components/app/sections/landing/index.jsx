@@ -1,10 +1,24 @@
 import React from 'react'
-import Content from './content'
+import classConcat from '../../../../misc/classConcat'
 import BgGfx from './bgGfx'
+import Gfx from './gfx'
+import Title from './title'
+import './styles.css'
 
-const LandingSection = () => (<>
-    <BgGfx />
-    <Content />
-</>)
+const LandingSection = () => (
+    <section className={classConcat(
+        "container-fluid",
+        "landing"
+    )}>
+        <div className="row align-items-center">
+            <div className="col-md-5 text-center">
+                <Gfx />
+            </div>
+            <div className="col-md-7">
+                <Title />
+            </div>
+        </div>
+    </section>
+)
 
 export default LandingSection

@@ -6,3 +6,7 @@ body {
     background-color: #e0e8ff;
     font-family: 'Pridi', serif;
 }
+
+section {
+    line-height: initial;
+}

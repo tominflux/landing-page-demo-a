@@ -4,7 +4,7 @@ import {
     initThreeAnimation, 
     startThreeAnimation, 
     stopThreeAnimation
-} from '../../../../../../../misc/threeAnimation'
+} from '../../../../../misc/threeAnimation'
 import { genCircles, rotateOnce, rotateAgain } from './mainCircles'
 import './styles.css'
 
