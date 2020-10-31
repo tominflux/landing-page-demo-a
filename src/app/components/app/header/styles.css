@@ -2,7 +2,6 @@
 .header {
     position: relative;
     z-index: 100;
-    padding: 18pt;
     line-height: initial;
     animation-name: delayedFadeIn;
     animation-duration: 2.22s;
