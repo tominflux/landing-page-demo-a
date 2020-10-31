@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from './footer'
 import Header from './header'
 import CtaFooter from './sections/ctaFooter'
 import HowItWorksSection from './sections/howItWorks'
@@ -13,6 +14,7 @@ const App = () => (<>
     <UniqueSection />
     <HowItWorksSection />
     <CtaFooter />
+    <Footer />
 </>)
 
 export default App
