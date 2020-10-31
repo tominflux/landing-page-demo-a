@@ -1,0 +1,9 @@
+
+.unique-hero__img {
+    width: 88%;
+}
+@media (min-width: 768px) {
+    .unique-hero__img {
+        width: 66%;
+    }
+}
