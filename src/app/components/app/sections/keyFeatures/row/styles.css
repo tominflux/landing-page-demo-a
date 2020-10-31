@@ -1,0 +1,19 @@
+
+.key-features-row__img {
+    width: 66%;
+    max-width: 180pt;
+}
+@media (min-width: 992px) {
+    .key-features-row__img {
+        width: 100%;
+    }
+}
+
+.key-features-row__paragraph {
+    font-size: 12pt;
+}
+@media (min-width: 992px) {
+    .key-features-row__paragraph {
+        font-size: 14pt;
+    }
+}
