@@ -2,3 +2,11 @@
 .how-it-works {
     min-height: 100vh;
 }
+
+.how-it-works__step--2 {
+    margin-top: 233pt;
+}
+
+.how-it-works__step--3 {
+    margin-top: 466pt;
+}
