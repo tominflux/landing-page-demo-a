@@ -10,6 +10,7 @@ const LandingSection = () => (
         "container-fluid",
         "landing"
     )}>
+        <BgGfx />
         <div className="row align-items-center">
             <div className="col-md-5 text-center">
                 <Gfx />

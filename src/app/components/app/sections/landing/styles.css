@@ -1,5 +1,13 @@
 
 .landing {
-    margin-top: 6vh;
-    height: 100vh;
+    margin-top: 0vh;
+    min-height: 120vh;
+    overflow: hidden;
+    position: relative;
+}
+@media (min-width: 991px) {
+    .landing {
+        margin-top: 6vh;
+        min-height: 90vh;
+    }
 }
