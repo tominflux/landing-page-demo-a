@@ -6,7 +6,7 @@
 
 .fade-transition {
     opacity: 0.0 !important;
-    transition: opacity 0.66s ease-out, transform 0.88s ease-out;
+    transition: opacity 0.66s ease, transform 0.88s ease;
 }
 .fade-transition-bottom {
     transform: translateY(133%);
