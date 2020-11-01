@@ -27,6 +27,7 @@ const KeyFeaturesSection = () => (
             </FadeTransition>
         </div>
         <KeyFeaturesRow
+            index={0}
             imgSrc={triangle}
             invert
         >
@@ -35,6 +36,7 @@ const KeyFeaturesSection = () => (
             why this is something or other.
         </KeyFeaturesRow>
         <KeyFeaturesRow
+            index={1}
             imgSrc={triangle}
         >
             Description about key feature #2. Something 
@@ -42,6 +44,7 @@ const KeyFeaturesSection = () => (
             why this is something or other.
         </KeyFeaturesRow>
         <KeyFeaturesRow
+            index={2}
             imgSrc={triangle}
             invert
         >

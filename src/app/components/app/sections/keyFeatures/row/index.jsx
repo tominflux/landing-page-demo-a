@@ -1,8 +1,10 @@
 import React from 'react'
 import classConcat from '../../../../../misc/classConcat'
+import FadeTransition, { FADE_DIRECTION } from '../../../util/fadeTranstiion'
 import './styles.css'
 
 const KeyFeaturesRow = ({ 
+    index,
     imgSrc,
     children,
     invert
@@ -10,7 +12,12 @@ const KeyFeaturesRow = ({
     // Computations
     // Render
     return (
-        <div className="row align-items-center my-md-4 my-md-5 py-md-5">
+        <FadeTransition 
+            className="row align-items-center my-md-4 my-md-5 py-md-5"
+            direction={FADE_DIRECTION.NONE}
+            delay={`${0.44 + 0.22 * index}s`}
+            duration="1.66s"
+        >
             <div className={classConcat(
                 "col-md-4",
                 "text-center",
@@ -36,7 +43,7 @@ const KeyFeaturesRow = ({
                     {children}
                 </p>
             </div>
-        </div>
+        </FadeTransition>
     )
 }
 

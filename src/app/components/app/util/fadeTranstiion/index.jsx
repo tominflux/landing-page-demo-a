@@ -18,6 +18,7 @@ const FadeTransition = ({
     children,
     direction,
     delay,
+    duration,
     release,
     show,
     showInitial,
@@ -72,7 +73,8 @@ const FadeTransition = ({
     )
     const compositeStyle = {
         ...style,
-        transitionDelay: show ? delay : release,
+        transitionDelay: shouldShow ? delay : release,
+        transitionDuration: duration
     }
     // Render
     return React.createElement(
@@ -89,9 +91,10 @@ const FadeTransition = ({
 
 FadeTransition.defaultProps = {
     children: null,
-    tag: 'p',
+    tag: 'div',
     direction: FADE_DIRECTION.BOTTOM,
     delay: '0.5s',
+    duration: null,
     release: '0.15s',
     show: false,
     showInitial: false,

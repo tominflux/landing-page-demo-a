@@ -1,4 +1,9 @@
 
+
+:root {
+    --fade-time-fn: 0;
+}
+
 .fade-transition {
     opacity: 0.0 !important;
     transition: opacity 0.66s ease-out, transform 0.88s ease-out;
