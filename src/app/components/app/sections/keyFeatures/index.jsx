@@ -1,9 +1,10 @@
 import React from 'react'
+import KeyFeaturesRow from './row'
+import FadeTransition from '../../util/fadeTranstiion'
 import classConcat from '../../../../misc/classConcat'
 import triangle from './triangle.svg'
 import star from './star.svg'
 import './styles.css'
-import KeyFeaturesRow from './row'
 
 const KeyFeaturesSection = () => (
     <section className={classConcat(
@@ -12,15 +13,18 @@ const KeyFeaturesSection = () => (
         "key-features"
     )}>
         <div className="text-center">
-            <h2 className={classConcat(
-                "text-center",
-                "px-2",
-                "py-1",
-                "my-5",
-                "key-features__heading"
-            )}>
+            <FadeTransition 
+                tag="h2"
+                className={classConcat(
+                    "text-center",
+                    "px-2",
+                    "py-1",
+                    "my-5",
+                    "key-features__heading"
+                )}
+            >
                 Key Features
-            </h2>
+            </FadeTransition>
         </div>
         <KeyFeaturesRow
             imgSrc={triangle}

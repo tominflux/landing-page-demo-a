@@ -1,0 +1,22 @@
+
+.fade-transition {
+    opacity: 0.0 !important;
+    transition: opacity 0.66s ease-out, transform 0.88s ease-out;
+}
+.fade-transition-bottom {
+    transform: translateY(133%);
+}
+.fade-transition-left {
+    transform: translateX(-133%);
+}
+.fade-transition-right {
+    transform: translateX(133%);
+}
+.fade-transition-top {
+    transform: translateY(-133%);
+}
+.fade-transition--show {
+    opacity: 1.0 !important;
+    transform: translateY(0%);
+}
+  
