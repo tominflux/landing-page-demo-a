@@ -4,7 +4,9 @@
 }
 
 .key-features__heading {
+    display: inline-block;
     font-size: 24pt;
+    border-bottom: dotted 6pt;
 }
 @media (min-width: 991px) {
     .key-features__heading {

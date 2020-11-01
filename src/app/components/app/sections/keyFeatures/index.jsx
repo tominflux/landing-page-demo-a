@@ -11,13 +11,17 @@ const KeyFeaturesSection = () => (
         "px-md-5",
         "key-features"
     )}>
-        <h2 className={classConcat(
-            "text-center",
-            "my-5",
-            "key-features__heading"
-        )}>
-            Key Features
-        </h2>
+        <div className="text-center">
+            <h2 className={classConcat(
+                "text-center",
+                "px-2",
+                "py-1",
+                "my-5",
+                "key-features__heading"
+            )}>
+                Key Features
+            </h2>
+        </div>
         <KeyFeaturesRow
             imgSrc={triangle}
             invert
