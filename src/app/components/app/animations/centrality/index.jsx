@@ -40,52 +40,8 @@ const CentralityAnimation = () => {
         threeAni.scene.add(outerRing)
         threeAni.scene.add(innerRing)
 
-        // Generate spokes.
-        const { geometry: spokeGeo, material: spokeMat} =
-            genSpokeGeoAndMat(dimensions)
-        const spokes = []
-        for (let i=0; i<6; i++) {
-            const spoke = genSpoke(spokeGeo, spokeMat)
-            spoke.rotation.set(
-                i * Math.PI / 3,
-                i * Math.PI / 2,
-                0
-            )
-            spokes.push(spoke)
-        }
-        
-        // Genereate spokes node
-        const node = new THREE.Object3D()
-
-        // Add spokes to scene
-        for (const spoke of spokes) {
-            node.add(spoke)
-        }
-
-        // Add spokes node to scene
-        threeAni.scene.add(node)
-
         //
-        startThreeAnimation(threeAni)
-        
-        
-        gsap.to(
-            node.rotation,
-            {
-                y: -3.75 * Math.PI,
-                duration: 2.66,
-                repeat: 100,
-
-            }
-        )
-        gsap.to(
-            node.rotation,
-            {
-                z: 4.25 * Math.PI,
-                duration: 3.33
-            }
-        )
-        
+        startThreeAnimation(threeAni)        
         
         const onHover = () => {
             // rotateAgain(mainCircles)
