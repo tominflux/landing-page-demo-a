@@ -1,0 +1,29 @@
+
+
+.rings-animation-a {
+    display: inline-block;
+    width: 260pt;
+    height: 260pt;
+}
+
+.rings-animation-a__main-circle {
+    fill: none;
+    stroke: rgb(44, 44, 66);
+    stroke-width: 11pt;
+}
+
+@media (max-width: 991px) {
+    .rings-animation-a {
+        width: 233pt;
+        height: 233pt;
+    }
+}
+
+@media (max-width: 767px) {
+    .rings-animation-a {
+        width: 180pt;
+        height: 180pt;
+        position: relative;
+        top: 22pt;
+    }
+}

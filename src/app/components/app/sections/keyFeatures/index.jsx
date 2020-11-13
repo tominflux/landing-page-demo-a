@@ -5,6 +5,8 @@ import classConcat from '../../../../misc/classConcat'
 import triangle from './triangle.svg'
 import star from './star.svg'
 import './styles.css'
+import RingsAnimationA from '../../animations/ringsA'
+import CentralityAnimation from '../../animations/centrality'
 
 const KeyFeaturesSection = () => (
     <section className={classConcat(
@@ -31,6 +33,7 @@ const KeyFeaturesSection = () => (
         <KeyFeaturesRow
             index={0}
             imgSrc={triangle}
+            animation={<CentralityAnimation />}
             invert
         >
             Description about key feature #1. Something 
@@ -40,6 +43,7 @@ const KeyFeaturesSection = () => (
         <KeyFeaturesRow
             index={1}
             imgSrc={triangle}
+            animation={<RingsAnimationA />}
         >
             Description about key feature #2. Something 
             about this, and something about that, and 
@@ -48,6 +52,7 @@ const KeyFeaturesSection = () => (
         <KeyFeaturesRow
             index={2}
             imgSrc={triangle}
+            animation={<RingsAnimationA />}
             invert
         >
             Description about key feature #3. Something 
