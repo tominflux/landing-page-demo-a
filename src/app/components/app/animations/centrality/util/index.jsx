@@ -3,98 +3,28 @@ import * as FATLINE from 'three-fatline'
 import { gsap } from 'gsap'
 import discImg from './disc.png'
 
-
-export const genOuterRing = (canvasDimensions) => {
-    //Generate positions.
-    const curve = new THREE.EllipseCurve(
-        0,  0,            
-        0.66,  0.66,           
-        0,  2 * Math.PI, 
-        false,
-        0
-    )
-    const points = curve.getPoints(64)
-    const positions = []
-    for (const point of points) {
-        positions.push(point.x)
-        positions.push(point.y)
-        positions.push(0)
-    }
-
-    //Create geometry and material.
-    const geometry = new FATLINE.LineGeometry()
-    geometry.setPositions(positions)
-    geometry.computeBoundingSphere()
-    geometry.center()
-    const material = new FATLINE.LineMaterial({ 
-        color: "rgb(44, 44, 66)",
-        linewidth: 6,
-        resolution: new THREE.Vector2(
-            canvasDimensions.w, 
-            canvasDimensions.h
-        )
+export const waveRing = (
+    ring, 
+    scaleOrigin, 
+    duration=3,
+    delay=0,
+    amp=1.15
+) => {
+    const timeline = gsap.timeline({
+        repeat: -1,
+        yoyo: true
     })
-
-    //Put together object
-    const ring = new FATLINE.Line2(geometry, material)
-
-    return ring
-}
-
-const genInnerRing = () => {
-    
-}
-
-export const rotateOnce = (circles) => {
-    const [circleA, circleB] = circles
-    circleA.rotation.y = 0
-    circleA.rotation.x = Math.PI / 4 
-    circleB.rotation.y = 0
-    circleB.rotation.x = -Math.PI / 4
-    gsap.to(
-        circleA.rotation,
-        {
-            y: -3.75 * Math.PI,
-            duration: 2.66
+    const max = amp * scaleOrigin
+    const min = (1/amp) * scaleOrigin
+    ring.scale.set(
+        min, min, min
+    )
+    timeline.to(
+        ring.scale, {
+            x: max, y: max, z: max,
+            duration,
+            ease: "sine.inOut"
         }
     )
-    gsap.to(
-        circleA.rotation,
-        {
-            z: 4.25 * Math.PI,
-            duration: 3.33
-        }
-    )
-    gsap.to(
-        circleB.rotation,
-        {
-            y: 1.5 + 3.75 * Math.PI,
-            duration: 2.66
-        }
-    )
-}
-
-export const rotateAgain = (circles) => {
-    const [circleA, circleB] = circles
-    gsap.to(
-        circleA.rotation,
-        {
-            y: circleA.rotation.y - 3.0 * Math.PI,
-            duration: 2.66
-        }
-    )
-    gsap.to(
-        circleA.rotation,
-        {
-            z: circleB.rotation.y + 3.33 * Math.PI,
-            duration: 3.33
-        }
-    )
-    gsap.to(
-        circleB.rotation,
-        {
-            y: circleB.rotation.y + 3.33 * Math.PI,
-            duration: 2.66
-        }
-    )
+    timeline.seek(delay)
 }

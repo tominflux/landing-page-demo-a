@@ -22,14 +22,13 @@ const genRingPositions = (pointCount) => {
     return positions
 }
 
-export const genRingGeoAndMat = (dimensions, pointCount=64) => {
+export const genRingGeo = (pointCount=64) => {
     const positions = genRingPositions(pointCount)
     const geometry = new FATLINE.LineGeometry()
     geometry.setPositions(positions)
     geometry.computeBoundingSphere()
     geometry.center()
-    const material = genLineMat(dimensions)
-    return { geometry, material }
+    return geometry
 }
 
 const genRing = (geometry, material) => 

@@ -7,10 +7,12 @@ import {
     stopThreeAnimation 
 } from '../../../../misc/threeAnimation'
 import genLine from '../util/genLine'
-import genRing, { genRingGeoAndMat } from '../util/genRing'
+import genRing, { genRingGeo, genRingGeoAndMat } from '../util/genRing'
 import genSpoke, { genSpokeGeoAndMat } from '../util/genSpoke'
 import './styles.css'
 import { gsap } from 'gsap'
+import genLineMat from '../util/genLineMat'
+import { waveRing, waveRings } from './util'
 
 
 const CentralityAnimation = () => {
@@ -30,18 +32,39 @@ const CentralityAnimation = () => {
         }
 
         // Generate rings.
-        const { geometry: ringGeo, material: ringMat } = 
-            genRingGeoAndMat(dimensions)
-        const outerRing = genRing(ringGeo, ringMat)
-        const innerRing = genRing(ringGeo, ringMat)
-        innerRing.scale.set(0.5, 0.5, 0.5)
+        const geometry = genRingGeo()
+        const thickMaterial = genLineMat(dimensions)
+        const thinMaterial = genLineMat(dimensions, 3)
+        const rings = []
+        const ringCount = 5
+        const getRingScale = (index) => (
+            1.0 - index * 0.66 / ringCount
+        )
+        for (let i=0; i<ringCount; i++) {
+            const material = (
+                i % 2 === 0 
+                    ? thickMaterial : thinMaterial
+            ) 
+            const ring = genRing(geometry, material)
+            const scale = getRingScale(i)
+            ring.scale.set(scale, scale, scale)
+            rings.push(ring)
+        }
+
+        // Start waving rings.
+        for (const ring of rings) {
+            const index = rings.indexOf(ring)
+            const scale = getRingScale(index)
+            waveRing(ring, scale, 1.88, index / 2, 1.066)
+        }
 
         // Add rings to scene.
-        threeAni.scene.add(outerRing)
-        threeAni.scene.add(innerRing)
+        for (const ring of rings) {
+            threeAni.scene.add(ring)
+        }
 
-        //
-        startThreeAnimation(threeAni)        
+        // 
+        startThreeAnimation(threeAni)    
         
         const onHover = () => {
             // rotateAgain(mainCircles)
