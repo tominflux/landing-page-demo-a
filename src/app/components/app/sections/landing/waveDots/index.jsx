@@ -1,11 +1,11 @@
 import React from 'react'
-import Circle from './circle'
+import Dot from './dot'
 import './styles.css'
 
-const BgGfx = () => {
+const WaveDots = () => {
     //
-    const genCirclesA = () => {
-        const circles = []
+    const genDots = () => {
+        const dots = []
         const cellSize = 100/26.66
         let i = 0;
         for (let x=0; x<=100; x+=cellSize) {
@@ -36,7 +36,7 @@ const BgGfx = () => {
                     const key = i
                     i++
                     const circle = (
-                        <Circle 
+                        <Dot 
                             key={key}
                             id={key}
                             x={x}
@@ -45,18 +45,18 @@ const BgGfx = () => {
                             animationDelay={`${animationDelay}s`}
                         />
                     )
-                    circles.push(circle)
+                    dots.push(circle)
                 }
             }
         }
-        return circles
+        return dots
     }
     //Render
     return (
         <div className="bg-gfx">
-            { genCirclesA() }
+            { genDots() }
         </div>
     )
 }
 
-export default BgGfx
+export default WaveDots

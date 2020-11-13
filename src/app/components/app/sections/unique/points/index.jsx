@@ -1,10 +1,15 @@
 import React from 'react'
+import FadeTransition, { FADE_DIRECTION } from '../../../util/fadeTranstiion'
 import circle from './circle.svg'
 import './styles.css'
 
 const UniqueSectionPoints = () => (<>
     <div className="row my-5">
-        <div className="col-md-4 text-center">
+        <FadeTransition 
+            direction={FADE_DIRECTION.NONE}
+            delay="0.22s"
+            className="col-md-4 text-center"
+        >
             <div>
                 <img
                     src={circle}
@@ -17,8 +22,12 @@ const UniqueSectionPoints = () => (<>
                     Unique Factor #1
                 </h3>
             </div>
-        </div>
-        <div className="col-md-4 text-center">
+        </FadeTransition>
+        <FadeTransition 
+            direction={FADE_DIRECTION.NONE}
+            delay="0.44s"
+            className="col-md-4 text-center"
+        >
             <div>
                 <img
                     src={circle}
@@ -31,8 +40,12 @@ const UniqueSectionPoints = () => (<>
                     Unique Factor #2
                 </h3>
             </div>
-        </div>
-        <div className="col-md-4 text-center">
+        </FadeTransition>
+        <FadeTransition 
+            direction={FADE_DIRECTION.NONE}
+            delay="0.66s"
+            className="col-md-4 text-center"
+        >
             <div>
                 <img
                     src={circle}
@@ -45,7 +58,7 @@ const UniqueSectionPoints = () => (<>
                     Unique Factor #3
                 </h3>
             </div>
-        </div>
+        </FadeTransition>
     </div>
 </>)
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { endLoop, startLoop } from '../../misc/animationLoop'
 
-const useIsInView = (ref) => {
+const useIsInView = (ref, offset = {x:0, y:0}) => {
     if (typeof window === "undefined") return true
     // State
     const [isInView, setInView] = React.useState(false)
@@ -13,10 +13,10 @@ const useIsInView = (ref) => {
             if (!ref.current) return 
             const rect = ref.current.getBoundingClientRect()
             const currentlyInView = (
-                rect.left < window.innerWidth &&
-                rect.right > 0 &&
-                rect.top < window.innerHeight &&
-                rect.bottom > 0
+                rect.left < window.innerWidth + offset.x &&
+                rect.right > 0 + offset.x &&
+                rect.top < window.innerHeight + offset.y &&
+                rect.bottom > 0 + offset.y
             )
             if (currentlyInView !== isInView) {
                 setInView(currentlyInView)

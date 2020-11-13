@@ -1,12 +1,16 @@
 import React from 'react'
 import classConcat from '../../../../../misc/classConcat'
+import FadeTransition, { FADE_DIRECTION } from '../../../util/fadeTranstiion'
 import './styles.css'
 
-const HowItWorksStep = ({className, imgSrc, heading, paragraph}) => (
-    <div className={classConcat(
-        "how-it-works-step",
-        className
-    )}>
+const HowItWorksStep = ({index, className, imgSrc, heading, paragraph}) => (
+    <FadeTransition 
+        offset={{x: 0, y: 440}}
+        className={classConcat(
+            "how-it-works-step",
+            className
+        )}
+    >
         <div className="px-5 py-4">
             <img 
                 src={imgSrc}
@@ -22,7 +26,7 @@ const HowItWorksStep = ({className, imgSrc, heading, paragraph}) => (
                 {paragraph}
             </p> 
         </div>
-    </div>
+    </FadeTransition>
 )
 
 export default HowItWorksStep

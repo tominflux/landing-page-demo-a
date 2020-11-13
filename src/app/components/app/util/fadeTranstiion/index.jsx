@@ -25,6 +25,8 @@ const FadeTransition = ({
     className,
     style,
     auto,
+    offset,
+    grow, 
     ...others
 }) => {
     // Validate
@@ -45,7 +47,7 @@ const FadeTransition = ({
     // State
     const [showing, setShowing] = React.useState(showInitial)
     // Hooks 
-    const isInView = useIsInView(ref)
+    const isInView = useIsInView(ref, offset)
     // Effects
     React.useEffect(() => {
         if (auto) {
@@ -100,7 +102,9 @@ FadeTransition.defaultProps = {
     showInitial: false,
     className: null,
     style: {},
-    auto: true
+    auto: true,
+    offset: {x: 0, y: 0},
+    grow: false,
 }
 
 FadeTransition.propTypes = {
@@ -114,6 +118,11 @@ FadeTransition.propTypes = {
     className: PropTypes.string,
     style: stylePropType,
     auto: PropTypes.bool,
+    offset: PropTypes.shape({
+        x: PropTypes.number,
+        y: PropTypes.number
+    }),
+    grow: PropTypes.bool,
 }
 
 export default FadeTransition

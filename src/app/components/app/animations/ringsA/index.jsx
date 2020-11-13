@@ -1,15 +1,15 @@
 import React from 'react'
 import { 
     createThreeAnimation, 
-    initThreeAnimation, 
+    initThreeAnimation,
     startThreeAnimation, 
-    stopThreeAnimation
-} from '../../../../../misc/threeAnimation'
-import { genCircles, rotateOnce, rotateAgain } from './mainCircles'
+    stopThreeAnimation 
+} from '../../../../misc/threeAnimation'
+import { genCircles, rotateOnce, rotateAgain } from './util'
 import './styles.css'
 
 
-const Gfx = (props) => {
+const RingsAnimationA = () => {
     //Refs
     const canvas = React.createRef(null)
     //Effects
@@ -48,13 +48,13 @@ const Gfx = (props) => {
     })
     //Render
     return (
-        <div className="gfx">
+        <div className="rings-animation-a">
             <canvas 
                 ref={canvas}
-                className="gfx__canvas"
+                className="rings-animation-a__canvas"
             />
         </div>
     )
 }
 
-export default Gfx
+export default RingsAnimationA

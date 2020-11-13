@@ -5,7 +5,7 @@ import './styles.css'
 
 const HOVER_DISTANCE = 166
 
-const Circle = (props) => {
+const Dot = (props) => {
     //Ref
     const ref = React.createRef(null)
     //State
@@ -40,7 +40,7 @@ const Circle = (props) => {
     })
     //Constants
     const className = (
-        `circle${isHovering ? " circle--hover" : ""}`
+        `dot${isHovering ? " dot--hover" : ""}`
     )
     const style = {
         left: `${props.x}%`,
@@ -59,4 +59,4 @@ const Circle = (props) => {
     )
 }
 
-export default Circle
+export default Dot

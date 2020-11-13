@@ -1,9 +1,10 @@
 
 .unique-hero__img {
-    width: 88%;
+    width: 55%;
+    filter: brightness(0.8) contrast(1.5) saturate(1.2) drop-shadow(0pt 6pt 6pt rgb(44, 44, 66, 0.66));
 }
 @media (min-width: 768px) {
     .unique-hero__img {
-        width: 66%;
+        width: 44%;
     }
 }

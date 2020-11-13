@@ -1,6 +1,6 @@
 import React from 'react'
 import KeyFeaturesRow from './row'
-import FadeTransition from '../../util/fadeTranstiion'
+import FadeTransition, { FADE_DIRECTION } from '../../util/fadeTranstiion'
 import classConcat from '../../../../misc/classConcat'
 import triangle from './triangle.svg'
 import star from './star.svg'
@@ -15,6 +15,7 @@ const KeyFeaturesSection = () => (
         <div className="text-center">
             <FadeTransition 
                 tag="h2"
+                direction={FADE_DIRECTION.NONE}
                 className={classConcat(
                     "text-center",
                     "px-2",
@@ -22,6 +23,7 @@ const KeyFeaturesSection = () => (
                     "my-5",
                     "key-features__heading"
                 )}
+                delay="0.15s"
             >
                 Key Features
             </FadeTransition>

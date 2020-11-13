@@ -17,6 +17,7 @@ const HowItWorksSection = () => (
                 "how-it-works__step--1"
             )}>
                 <HowItWorksStep 
+                    index={0}
                     className="text-left"
                     imgSrc={rectangle}
                     heading="Step #1"
@@ -32,6 +33,7 @@ const HowItWorksSection = () => (
                 "how-it-works__step--2"
             )}>
                 <HowItWorksStep 
+                    index={1}
                     className="text-center"
                     imgSrc={rectangle}
                     heading="Step #2"
@@ -47,6 +49,7 @@ const HowItWorksSection = () => (
                 "how-it-works__step--3"
             )}>
                 <HowItWorksStep 
+                    index={2}
                     className="text-right"
                     imgSrc={rectangle}
                     heading="Step #3"

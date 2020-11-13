@@ -1,7 +1,7 @@
 import React from 'react'
 import classConcat from '../../../../misc/classConcat'
-import BgGfx from './bgGfx'
-import Gfx from './gfx'
+import WaveDots from './waveDots'
+import RingsAnimationA from '../../animations/ringsA'
 import Title from './title'
 import './styles.css'
 
@@ -10,10 +10,10 @@ const LandingSection = () => (
         "container-fluid",
         "landing"
     )}>
-        <BgGfx />
+        <WaveDots />
         <div className="row align-items-center">
             <div className="col-md-5 text-center">
-                <Gfx />
+                <RingsAnimationA />
             </div>
             <div className="col-md-7">
                 <Title />

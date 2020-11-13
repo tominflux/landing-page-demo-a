@@ -12,9 +12,13 @@ const KeyFeaturesRow = ({
     // Computations
     // Render
     return (
-        <div 
-            className="row align-items-center my-md-4 my-md-5 py-md-5"
-        >
+        <div className={classConcat(
+            "row",
+            "align-items-center",
+            "my-md-5",
+            "py-md-5",
+            "key-features-row"
+        )}>
             <div className={classConcat(
                 "col-md-4",
                 "text-center",
@@ -24,7 +28,7 @@ const KeyFeaturesRow = ({
                 <FadeTransition
                     tag="img" 
                     direction={invert ? FADE_DIRECTION.RIGHT : FADE_DIRECTION.LEFT}
-                    delay={`${0.11 + 0.22 * index}s`}
+                    delay={`${0.11 + 0.1 * index}s`}
                     duration="0.88s"
                     src={imgSrc} 
                     alt="" 
@@ -43,7 +47,7 @@ const KeyFeaturesRow = ({
                         invert ? "text-md-right" : "text-md-left"
                     )}
                     direction={FADE_DIRECTION.BOTTOM}
-                    delay={`${0.33 + 0.22 * index}s`}
+                    delay={`${0.33 + 0.11 * index}s`}
                     duration="1.44s"
                 > 
                     {children}

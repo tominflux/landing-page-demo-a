@@ -1,7 +1,7 @@
 
 
 
-.circle {
+.dot {
     width: 64pt;
     height: 64pt;
     position: absolute;
@@ -14,13 +14,13 @@
     transition: transform 0.33s ease;
 }
 
-.circle--hover {
+.dot--hover {
     transform: translate(-50%, -50%) scale(1.33);
 }
 
 
 @media (max-width: 767px) {
-    .circle {
+    .dot {
         margin-top: 28pt;
     }
 }
