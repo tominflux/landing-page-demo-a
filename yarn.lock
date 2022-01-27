@@ -4872,10 +4872,10 @@ three-fatline@^0.3.0:
   resolved "https://registry.yarnpkg.com/three-fatline/-/three-fatline-0.3.0.tgz#e4124938c168490cb0012ca20aa0c7e2ed726b25"
   integrity sha512-nqh0LjuG8cYBZFYL/U2ZGCAPVcKKaQZ3l+PP7WjGn8AKc7xHAYl4znuqDAQ+33ZdR/b9twVyTNlmUQBUSdLjMQ==
 
-three@>=0.84.0:
-  version "0.122.0"
-  resolved "https://registry.yarnpkg.com/three/-/three-0.122.0.tgz#bd9ed8a8820074856e8ba7b63fe0a65176e01aeb"
-  integrity sha512-bgYMo0WdaQhf7DhLE8OSNN/rVFO5J4K1A2VeeKqoV4MjjuHjfCP6xLpg8Xedhns7NlEnN3sZ6VJROq19Qyl6Sg==
+three@>=0.137.0:
+  version "0.137.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.137.0.tgz#0ebd6ba66637a332c31f234bcdd35aeec071a6e3"
+  integrity sha512-rzSDhia6cU35UCy6y+zEEws6vSgytfHqFMSaBvUcySgzwvDO6vETyswtSNi/+aVqJw8WLMwyT1mlQQ1T/dxxOA==
 
 through2@^2.0.0, through2@~2.0.3:
   version "2.0.5"
